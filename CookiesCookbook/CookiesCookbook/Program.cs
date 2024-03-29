@@ -1,4 +1,4 @@
-﻿namespace CookisesCookbook
+﻿namespace CookiesCookbook
 {
     internal class Program
     {
