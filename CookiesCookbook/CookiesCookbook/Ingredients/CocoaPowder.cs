@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Ingredients
 {
-    internal class CocoaPowder : Ingredient, IInstruction
+    internal class CocoaPowder : Ingredient
     {
         public override int ID { get; set; } = 8;
         public override string Name { get; set; } = "Cocoa Powder";
 
-        public string InstructionOfPreparing()
+        public override string InstructionOfPreparing()
         {
             return "Add to other ingredients.";
         }

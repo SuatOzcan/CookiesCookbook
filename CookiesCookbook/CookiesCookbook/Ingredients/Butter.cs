@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Ingredients
 {
-    internal class Butter : Ingredient, IInstruction
+    internal class Butter : Ingredient
     {
         public override int ID { get; set; } = 3;
         public override string Name { get; set; } = "Butter";
-        public string InstructionOfPreparing()
+        public override string InstructionOfPreparing()
         {
-            return "Melt on lowheat. Add to other ingredients.";
+            return "Melt on low-heat. Add to other ingredients.";
         }
     }
 }

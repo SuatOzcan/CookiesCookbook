@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CookiesCookbook
+﻿namespace CookiesCookbook.Ingredients
 {
     internal class CoconutFlour : Flour
     {
-        public override int ID { get; set; }
+        public override int ID { get; set; } = 2;
         public override string Name { get; set; } = "Coconut flour";
     }
 }

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Ingredients
 {
-    internal class Sugar : Ingredient,IInstruction
+    internal class Sugar : Ingredient
     {
         public override int ID { get; set; } = 5;
         public override string Name { get; set; } = "Sugar";
 
-        public string InstructionOfPreparing()
+        public override string InstructionOfPreparing()
         {
             return "Add to other ingredients.";
         }
