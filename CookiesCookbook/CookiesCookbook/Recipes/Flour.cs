@@ -1,9 +1,7 @@
-﻿using CookiesCookbook.Recipes;
-
-namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Recipes
 {
     internal abstract class Flour : Ingredient
     {
-        public override string PreparationInstruction  => $"Sieve. {base.PreparationInstruction}";
+        public override string PreparationInstructions => $"Sieve. {base.PreparationInstructions}";
     }
 }

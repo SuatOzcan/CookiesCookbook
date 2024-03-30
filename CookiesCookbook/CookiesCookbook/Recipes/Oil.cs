@@ -1,11 +1,9 @@
-﻿using CookiesCookbook.Recipes;
-
-namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Recipes
 {
     internal class Oil : Ingredient
     {
         public override int Id { get; set; } = 6;
         public override string Name { get; set; } = "Oil";
-        public override string PreparationInstruction { get; } = $"Take half a teaspoon. Add to other ingredients.";
+        public override string PreparationInstructions => $"Take half a teaspoon. {base.PreparationInstructions} Add to other ingredients.";
     }
 }

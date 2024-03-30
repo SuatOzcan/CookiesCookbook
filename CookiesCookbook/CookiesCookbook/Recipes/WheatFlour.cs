@@ -1,4 +1,4 @@
-﻿namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Recipes
 {
     internal class WheatFlour : Flour
     {

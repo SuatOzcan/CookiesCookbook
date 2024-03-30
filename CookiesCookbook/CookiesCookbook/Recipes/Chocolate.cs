@@ -1,13 +1,11 @@
-﻿using CookiesCookbook.Recipes;
-
-namespace CookiesCookbook.Ingredients
+﻿namespace CookiesCookbook.Recipes
 {
     internal class Chocolate : Ingredient
     {
         public override int Id { get; set; } = 4;
         public override string Name { get; set; } = "Chocolate";
 
-        public override string PreparationInstruction => $"Melt in a water bath. {base.PreparationInstruction}";
-        
+        public override string PreparationInstructions => $"Melt in a water bath. {base.PreparationInstructions}";
+
     }
 }
