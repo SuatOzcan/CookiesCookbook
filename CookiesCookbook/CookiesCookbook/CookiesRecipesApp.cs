@@ -2,10 +2,10 @@
 {
     internal class CookiesRecipesApp
     {
-        private readonly RecipesRepository _recipesRepository;
-        private readonly RecipesUserInteraction _recipesUserInteraction;
+        private readonly IRecipesRepository _recipesRepository;
+        private readonly IRecipesUserInteraction _recipesUserInteraction;
 
-        public CookiesRecipesApp(RecipesRepository recipesRepository, RecipesUserInteraction recipesUserInteraction)
+        public CookiesRecipesApp(IRecipesRepository recipesRepository, IRecipesUserInteraction recipesUserInteraction)
         {
             this._recipesRepository = recipesRepository;
             this._recipesUserInteraction = recipesUserInteraction;
