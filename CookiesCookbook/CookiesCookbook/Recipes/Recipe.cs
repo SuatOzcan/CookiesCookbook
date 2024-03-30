@@ -19,6 +19,7 @@ namespace CookiesCookbook.Recipes
             }
             return string.Join(Environment.NewLine, steps);
         }
+
         public Recipe(IEnumerable<Ingredient> ingredients)
         {
             Ingredients = ingredients;

@@ -15,5 +15,6 @@ namespace CookiesCookbook
         internal void ShowMessage(string message);
         internal void PrintExistingRecipes(IEnumerable<Recipe> allRecipes);
         void PromptToCreateRecipe();
+        IEnumerable<Ingredient> ReadIngredientsFromUser();
     }
 }

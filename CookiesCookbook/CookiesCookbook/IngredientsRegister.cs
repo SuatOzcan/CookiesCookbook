@@ -12,6 +12,18 @@ namespace CookiesCookbook
         new CoconutFlour(),
         new Oil(),
         new Sugar(),
-        new WheatFlour()}; 
+        new WheatFlour()};
+
+        internal Ingredient GetById(int id)
+        {
+            foreach (var ingredient in All)
+            {
+                if(ingredient.Id == id)
+                {
+                    return ingredient;
+                }
+            }
+            return null;
+        }
     }
 }

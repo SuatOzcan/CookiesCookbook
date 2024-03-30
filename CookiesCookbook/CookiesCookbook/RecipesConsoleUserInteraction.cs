@@ -1,6 +1,7 @@
 ﻿using CookiesCookbook.Recipes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,36 @@ namespace CookiesCookbook
             {
                 Console.WriteLine(ingredient);
             }
+        }
+
+        public IEnumerable<Ingredient> ReadIngredientsFromUser()
+        {
+            bool shallStop = false;
+            List<Ingredient> ingredients = new List<Ingredient>();
+
+            while (!shallStop)
+            {
+                Console.WriteLine("Add an ingredient by its ID, or type anything else if finished.");
+                string userInput = Console.ReadLine();
+                if(int.TryParse(userInput, out int id))
+                {
+                    Ingredient selectedIngredient = _ingredientsRegister.GetById(id);
+                    if(selectedIngredient != null)
+                    {
+                        ingredients.Add(selectedIngredient);
+                    }
+                    else
+                    {
+                        Console.WriteLine("We do not have the requested ingredient.");
+                    }
+                }
+                else
+                {
+                    shallStop = true;
+                }
+            }
+
+            return ingredients;
         }
 
         public void ShowMessage(string message)
