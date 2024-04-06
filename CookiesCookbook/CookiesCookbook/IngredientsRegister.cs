@@ -2,9 +2,9 @@
 
 namespace CookiesCookbook
 {
-    internal class IngredientsRegister
+    internal class IngredientsRegister : IIngredientsRegister
     {
-        public IEnumerable<Ingredient> All { get; } = new List<Ingredient> { 
+        public IEnumerable<Ingredient> All { get; } = new List<Ingredient> {
         new Butter(),
         new Chocolate(),
         new Cinnamon(),
@@ -14,11 +14,11 @@ namespace CookiesCookbook
         new Sugar(),
         new WheatFlour()};
 
-        internal Ingredient GetById(int id)
+        public Ingredient GetById(int id)
         {
             foreach (var ingredient in All)
             {
-                if(ingredient.Id == id)
+                if (ingredient.Id == id)
                 {
                     return ingredient;
                 }

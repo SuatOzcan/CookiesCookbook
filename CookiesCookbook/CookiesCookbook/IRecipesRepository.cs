@@ -9,7 +9,7 @@ namespace CookiesCookbook
 {
     internal interface IRecipesRepository
     {
-        List<Recipe> Read(string filePath);
-        void Write(string filePath, List<Recipe> allRecipes);
+        List<Recipe> ReadIntoListOfRecipes(string filePath);
+        void PrepareToWrite(string filePath, List<Recipe> allRecipes);
     }
 }

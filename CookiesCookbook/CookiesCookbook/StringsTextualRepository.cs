@@ -12,8 +12,12 @@ namespace CookiesCookbook
 
         public List<string> Read(string filePath)
         {
-            var fileContents = File.ReadAllText(filePath);
-            return fileContents.Split(Seperator).ToList();
+            if(File.Exists(filePath)) 
+            {
+                var fileContents = File.ReadAllText(filePath);
+                return fileContents.Split(Seperator).ToList();
+            }
+            return new List<string>();
         }
 
         public void Write(string filePath, List<string> strings)

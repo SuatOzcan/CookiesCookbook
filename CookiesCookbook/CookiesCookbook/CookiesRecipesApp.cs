@@ -15,7 +15,7 @@ namespace CookiesCookbook
 
         public void Run(string filePath)
         {
-            var allRecipes = _recipesRepository.Read(filePath);
+            var allRecipes = _recipesRepository.ReadIntoListOfRecipes(filePath);
             _recipesUserInteraction.PrintExistingRecipes(allRecipes);
 
             _recipesUserInteraction.PromptToCreateRecipe();
@@ -26,7 +26,7 @@ namespace CookiesCookbook
             {
                 var recipe = new Recipe(ingredients);
                 allRecipes.Add(recipe);
-                _recipesRepository.Write(filePath, allRecipes);
+                _recipesRepository.PrepareToWrite(filePath, allRecipes);
                 _recipesUserInteraction.ShowMessage("Recipe added:");
                 _recipesUserInteraction.ShowMessage(recipe.ToString());
             }

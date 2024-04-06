@@ -4,10 +4,13 @@
     {
         static void Main(string[] args)
         {
+            IngredientsRegister ingredientsRegister = new IngredientsRegister();
+
             CookiesRecipesApp cookiesRecipesApp = new CookiesRecipesApp(new RecipesRepository(
-                                                                          new StringsTextualRepository()),
+                                                                          new StringsTextualRepository(),
+                                                                          ingredientsRegister),
                                                                         new RecipesConsoleUserInteraction(
-                                                                            new IngredientsRegister()
+                                                                            ingredientsRegister
                                                                             )
                                                                         );
             cookiesRecipesApp.Run("recipes.txt");
