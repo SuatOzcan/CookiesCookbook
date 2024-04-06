@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CookiesCookbook.Recipes;
+using CookiesCookbook.Recipes.Ingredients;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.App
 {
     internal interface IRecipesUserInteraction
     {

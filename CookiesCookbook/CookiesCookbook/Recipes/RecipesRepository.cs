@@ -1,7 +1,8 @@
-﻿using CookiesCookbook.Recipes;
+﻿using CookiesCookbook.DataAccess;
+using CookiesCookbook.Recipes.Ingredients;
 using System.ComponentModel;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.Recipes
 {
     internal class RecipesRepository : IRecipesRepository
     {
@@ -57,7 +58,7 @@ namespace CookiesCookbook
             foreach (var recipe in allRecipes)
             {
                 List<int> allIDs = new List<int>();
-                foreach(var ingredient in recipe.Ingredients)
+                foreach (var ingredient in recipe.Ingredients)
                 {
                     allIDs.Add(ingredient.Id);
                 }

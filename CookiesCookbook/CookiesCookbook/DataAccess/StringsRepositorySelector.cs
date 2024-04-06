@@ -1,9 +1,9 @@
 ﻿using static CookiesCookbook.Program;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.DataAccess
 {
     internal static class StringsRepositorySelector
-    { 
+    {
         public static IStringsRepository SelectStringsRepository(FileFormat FileFormat)
         {
             switch (FileFormat)

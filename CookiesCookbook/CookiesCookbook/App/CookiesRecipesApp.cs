@@ -1,6 +1,7 @@
 ﻿using CookiesCookbook.Recipes;
+using CookiesCookbook.Recipes.Ingredients;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.App
 {
     internal class CookiesRecipesApp
     {
@@ -9,8 +10,8 @@ namespace CookiesCookbook
 
         public CookiesRecipesApp(IRecipesRepository recipesRepository, IRecipesUserInteraction recipesUserInteraction)
         {
-            this._recipesRepository = recipesRepository;
-            this._recipesUserInteraction = recipesUserInteraction;
+            _recipesRepository = recipesRepository;
+            _recipesUserInteraction = recipesUserInteraction;
         }
 
         public void Run(string filePath)

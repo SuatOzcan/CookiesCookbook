@@ -1,6 +1,6 @@
 ﻿using CookiesCookbook.Recipes;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.Recipes.Ingredients
 {
     internal class IngredientsRegister : IIngredientsRegister
     {

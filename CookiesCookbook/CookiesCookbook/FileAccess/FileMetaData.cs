@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static CookiesCookbook.Program;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.FileAccess
 {
     internal class FileMetaData
     {

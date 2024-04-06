@@ -1,4 +1,5 @@
 ﻿using CookiesCookbook.Recipes;
+using CookiesCookbook.Recipes.Ingredients;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CookiesCookbook
+namespace CookiesCookbook.App
 {
     internal class RecipesConsoleUserInteraction : IRecipesUserInteraction
     {
@@ -25,7 +26,7 @@ namespace CookiesCookbook
         public void PromptToCreateRecipe()
         {
             Console.WriteLine("Create a new cookie receipt! Available ingredients are: ");
-            foreach(Ingredient ingredient in _ingredientsRegister.All)
+            foreach (Ingredient ingredient in _ingredientsRegister.All)
             {
                 Console.WriteLine(ingredient);
             }
@@ -40,10 +41,10 @@ namespace CookiesCookbook
             {
                 Console.WriteLine("Add an ingredient by its ID, or type anything else if finished.");
                 string userInput = Console.ReadLine();
-                if(int.TryParse(userInput, out int id))
+                if (int.TryParse(userInput, out int id))
                 {
                     Ingredient selectedIngredient = _ingredientsRegister.GetById(id);
-                    if(selectedIngredient != null)
+                    if (selectedIngredient != null)
                     {
                         ingredients.Add(selectedIngredient);
                     }
@@ -72,7 +73,7 @@ namespace CookiesCookbook
             {
                 Console.WriteLine("Existing recipes are: " + Environment.NewLine);
                 int counter = 1;
-                foreach(Recipe recipe in allRecipes)
+                foreach (Recipe recipe in allRecipes)
                 {
                     Console.WriteLine($"****************{counter}****************");
                     Console.WriteLine(recipe);

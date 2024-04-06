@@ -1,4 +1,4 @@
-﻿namespace CookiesCookbook.Recipes
+﻿namespace CookiesCookbook.Recipes.Ingredients
 {
     internal class Chocolate : Ingredient
     {

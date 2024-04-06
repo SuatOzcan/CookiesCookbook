@@ -1,4 +1,4 @@
-﻿namespace CookiesCookbook.Recipes
+﻿namespace CookiesCookbook.Recipes.Ingredients
 {
     internal abstract class Ingredient
     {
@@ -9,7 +9,7 @@
 
         public override string ToString()
         {
-            return $"{this.Name}  ID: {this.Id}";
+            return $"{Name}  ID: {Id}";
         }
     }
 }
