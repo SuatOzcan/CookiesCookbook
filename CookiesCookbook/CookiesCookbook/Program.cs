@@ -4,25 +4,10 @@
     {
         static void Main(string[] args)
         {
-            FileFormat fileFormat = FileFormat.Json;
-            IStringsRepository stringsRepository;
-            string filePath = "recipes";
-
-            switch (fileFormat)
-            {
-                case FileFormat.Json:
-                    stringsRepository = new StringsJSONRepository();
-                    filePath += ".json";
-                    break;
-                case FileFormat.Txt:
-                    stringsRepository = new StringsTextualRepository();
-                    filePath += ".txt";
-                    break;
-                default:
-                    stringsRepository = new StringsTextualRepository();
-                    filePath = ".txt";
-                    break;
-            }
+            FileFormat fileFormat = FileFormat.Txt;
+            FileMetaData fileMetaData = new FileMetaData("recipes", fileFormat);
+            string filePath = fileMetaData.ToPath();
+            IStringsRepository stringsRepository = StringsRepositorySelector.SelectStringsRepository(fileFormat);
 
             IngredientsRegister ingredientsRegister = new IngredientsRegister();
 
