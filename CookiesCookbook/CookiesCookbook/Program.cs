@@ -7,13 +7,13 @@
             IngredientsRegister ingredientsRegister = new IngredientsRegister();
 
             CookiesRecipesApp cookiesRecipesApp = new CookiesRecipesApp(new RecipesRepository(
-                                                                          new StringsTextualRepository(),
+                                                                          new StringsJSONRepository(),
                                                                           ingredientsRegister),
                                                                         new RecipesConsoleUserInteraction(
                                                                             ingredientsRegister
                                                                             )
                                                                         );
-            cookiesRecipesApp.Run("recipes.txt");
+            cookiesRecipesApp.Run("recipes.json");
         }
     }
 }
